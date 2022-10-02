@@ -1,0 +1,64 @@
+//pravljenje utility klasa za text i bg
+@each $key,
+  $val
+    in $colors
+    //ime mape
+
+{
+  .text-#{$key} {
+    color: $val;
+  }
+
+  //text  hover
+  .text-hover-#{$key} {
+    &:hover {
+      color: $val;
+    }
+  }
+  .bg-#{$key} {
+    background-color: $val;
+  }
+  .bg-hover-#{$key} {
+    &:hover {
+      background-color: $val;
+    }
+  }
+
+  //if kondicional != zajedno sa ostatkom koda sluzi u ovom slucaju da se naprave razlicite nijanse boja bez crnih i belih nijansi
+  @if ($val != black and $val != white) {
+    // light variations
+    @for $i from 1 through 9 {
+      .text-#{$key}-light-#{$i} {
+        color: mix(white, $val, $i * 10);
+      }
+      //text-hover-light
+      .text-hover-#{$key}-light-#{$i} {
+        &:hover {
+          color: mix(white, $val, $i * 10);
+        }
+      }
+      .bg-#{$key}-light-#{$i} {
+        background-color: mix(white, $val, $i * 10);
+      }
+    }
+
+    // dark variations
+    @for $i from 1 through 9 {
+      .text-#{$key}-dark-#{$i} {
+        color: mix(black, $val, $i * 10);
+      }
+      //text-hover-dark
+
+      .text-hover-#{$key}-dark-#{$i} {
+        &:hover {
+          color: mix(black, $val, $i * 10);
+        }
+      }
+      .bg-#{$key}-dark-#{$i} {
+        background-color: mix(black, $val, $i * 10);
+      }
+    }
+  }
+}
+
+// &:nth-child, &:active, &:visited, &:last-child etc

@@ -1,0 +1,36 @@
+{
+  "name": "bootstrap-v5",
+  "version": "1.0.0",
+  "description": "Learning bootstrap v5",
+  "main": "index.js",
+  "scripts": {
+    "postcss:watch": "postcss ",
+    "compile:sass": "sass --watch scss:assets/css",
+    "dev": "parcel index.html ",
+    "build": "parcel build index.html "
+  },
+  "keywords": [
+    "Bootstrap",
+    "bootstrap-v5",
+    "learn-bootstrap",
+    "learn-sass"
+  ],
+  "author": "Darko Kalincevic",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "gulp-purgecss": "^5.0.0",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0",
+    "purify-css": "^1.2.5",
+    "sass": "^1.54.9"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "autoprefixer": "^10.4.9",
+    "bootstrap": "^5.2.1",
+    "bootstrap-icons": "^1.9.1",
+    "gulp": "^4.0.2"
+  }
+}

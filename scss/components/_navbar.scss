@@ -1,0 +1,28 @@
+%flex-layout {
+  // % znaci da nece imati output i finalnom cssu
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.navbar {
+  @extend %flex-layout; // ovde idemo @extend a ispod pisemo dodatne propertise
+  padding: $base-padding $base-padding * 2;
+  box-shadow: $base-box-shadow;
+  .site-title {
+    font-size: $font-size-lg;
+  }
+  .container {
+    @extend %flex-layout;
+  }
+}
+
+@each $key, $val in $colors {
+  .navbar-#{$key} {
+    @extend .navbar;
+    background-color: $val;
+  }
+}
+//pravljenje navbar sa bojama, isli smo @extend navbar jer vec tu imamo sve propertise umesto @extend flex layout pa da dodajemo nesto

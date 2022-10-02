@@ -1,0 +1,69 @@
+//variables and functions
+@import "function";
+@import "variables";
+//base and layout
+@import "base";
+@import "breakpoints";
+@import "grid";
+
+//colors
+@import "colors";
+
+//components (button, card, navbar)
+@import "components/card";
+@import "components/button";
+@import "components/navbar";
+@import "components/badge";
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("../node_modules/bootstrap/scss/_variables.scss");
+
+//icons
+@import "bootstrap-icons/font/bootstrap-icons.css";
+//utilities (margin, padding, opacity)
+@import "utilities";
+
+.btn-primary {
+  background-color: lightseagreen;
+}
+$secondary: lightseagreen;
+/* Equal-height card images, cf. https://stackoverflow.com/a/47698201/1375163*/
+.card-img-top {
+  /*height: 11vw;*/
+  object-fit: cover;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .card-img-top {
+    height: 15vw;
+    margin-bottom: 20px;
+  }
+}
+.card-img-top {
+  flex-grow: 1;
+  object-fit: fill;
+}
+.card-body {
+  flex-grow: 0;
+}
+/* Medium devices (tablets, 768px and up) */
+// @media (min-width: 768px) {
+//   .card-img-top {
+//     height: 15vw;
+//     margin-bottom: 20px;
+//   }
+// }
+// /* Large devices (desktops, 992px and up) */
+// @media (min-width: 992px) {
+//   .card-img-top {
+//     height: 15vw;
+//     margin-bottom: 20px;
+//   }
+// }
+// /* Extra large devices (large desktops, 1200px and up) */
+// @media (min-width: 992px) {
+//   .card-img-top {
+//     height: 15vw;
+//     margin-bottom: 20px;
+//   }
+// }
